@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="StartingScreen" Height="450" Width="800">
+        Title="StartingScreen" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+       >
     <Window.Background>
-        <ImageBrush ImageSource="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Background.png" />
+        <ImageBrush ImageSource="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Background.png" />
     </Window.Background>
     <Grid>
         <Canvas>
-            <Button Canvas.Bottom="50" Canvas.Left="300" Style="{StaticResource ChangeStartBtn}"></Button>
+            <Button Canvas.Bottom="50" Canvas.Left="300"   Style="{StaticResource ChangeStartBtn}"></Button>
         </Canvas>
     </Grid>
 </Window>

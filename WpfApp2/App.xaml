@@ -5,8 +5,8 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <Style x:Key="ChangeStartBtn" TargetType="{x:Type Button}">
-            <Setter Property="OverridesDefaultStyle" Value="True"/> 
-            <Setter Property="Width" Value="200"/>
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Width" Value="200" />
             <Setter Property="BorderThickness" Value="0" />
             <Setter Property="Template">
                 <Setter.Value>
@@ -26,19 +26,19 @@
                 <Trigger Property="IsMouseOver" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Picture1.png"/>
+                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\StartScreen\StartBtn.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Picture2.png"/>
+                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\StartScreen\StartBtnHover.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
             </Style.Triggers>
         </Style>
-         
+
     </Application.Resources>
 </Application>
