@@ -18,7 +18,7 @@ namespace WpfApp2
     /// <summary>
     /// Interaction logic for MainScreen.xaml
     /// </summary>
-    public partial class MainScreen : Page
+    public partial class MainScreen : Window
     {
         public MainScreen()
         {
