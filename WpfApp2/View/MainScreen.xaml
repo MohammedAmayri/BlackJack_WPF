@@ -11,7 +11,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\My table22.png"></ImageBrush>
+            <ImageBrush ImageSource="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\GameBoard\GameBoardBackground.png"></ImageBrush>
         </Grid.Background>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -21,7 +21,7 @@
                 <RowDefinition Height="3*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\My table2.png" Grid.Column="0" Grid.Row="0" Margin="0,-68,0,129" Grid.RowSpan="2"></Image>
+            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\GameBoard\MyBoardTable.png" Grid.Column="0" Grid.Row="0" Margin="0,-68,0,129" Grid.RowSpan="2"></Image>
             <Grid Grid.Column="0" Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -47,9 +47,9 @@
                 <Label Grid.Row="0" Grid.Column="0" Content="Player:" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" ></Label>
                 <TextBlock Text="" HorizontalAlignment="Left" VerticalAlignment="Center"  FontSize="15" Foreground="White" Grid.Column="1" Grid.Row="0"  Grid.ColumnSpan="3" >PName</TextBlock>
                 <!--Dealer Name-->
-                <Label Grid.Column="0" Grid.Row="1" Content="Dealer:" FontSize="15" Foreground="White"  HorizontalAlignment="right" VerticalAlignment="top"  />
+                <Label Grid.Column="0" Grid.Row="1" Content="Dealer:" FontSize="15" Foreground="White"  HorizontalAlignment="right" VerticalAlignment="top"/>
 
-                <TextBlock  Text="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 5 0 0"  FontSize="15" Foreground="White" Grid.Column="1" Grid.Row="1"  Grid.ColumnSpan="3" >DName</TextBlock>
+                <TextBlock Text="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 5 0 0"  FontSize="15" Foreground="White" Grid.Column="1" Grid.Row="1"  Grid.ColumnSpan="3" >DName</TextBlock>
                 <!-- Dealer Count -->
                 <TextBlock Text="" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Margin="46,0,0,4" FontSize="25" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left">DealerPoints</TextBlock>
                 <!-- Player Conut -->
