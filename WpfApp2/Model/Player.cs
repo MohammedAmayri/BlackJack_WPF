@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfApp2.Model
 {
-    class Player
+    public class Player : ObservableObject
     {
         #region fields
         private string _name;
@@ -25,7 +25,7 @@ namespace WpfApp2.Model
             set
             {
                 _name = value;
-               //OnPropertyChanged(nameof(Name));
+               OnPropertyChanged(nameof(Name));
             }
         }
 
@@ -35,7 +35,7 @@ namespace WpfApp2.Model
             set
             {
                 _bankRoll = value;
-               //OnPropertyChanged(nameof(BankRoll));
+               OnPropertyChanged(nameof(BankRoll));
             }
         }
 
@@ -46,7 +46,7 @@ namespace WpfApp2.Model
             set
             {
                 _totalBet = value;
-               //OnPropertyChanged(nameof(TotalBet));
+               OnPropertyChanged(nameof(TotalBet));
             }
         }
 
@@ -57,7 +57,7 @@ namespace WpfApp2.Model
             set
             {
                 _totalWinnings = value;
-               //OnPropertyChanged(nameof(TotalWinnings));
+               OnPropertyChanged(nameof(TotalWinnings));
             }
         }
 
@@ -68,7 +68,7 @@ namespace WpfApp2.Model
             set
             {
                 _cardTotal = value;
-               //OnPropertyChanged(nameof(CardTotal));
+               OnPropertyChanged(nameof(CardTotal));
             }
         }
 
@@ -80,7 +80,7 @@ namespace WpfApp2.Model
             set
             {
                 _card = value;
-               //OnPropertyChanged(nameof(Card));
+               OnPropertyChanged(nameof(Card));
             }
         }
 
@@ -91,7 +91,7 @@ namespace WpfApp2.Model
             set
             {
                 _betAmount = value;
-               //OnPropertyChanged(nameof(BetAmount));
+               OnPropertyChanged(nameof(BetAmount));
             }
         }
 

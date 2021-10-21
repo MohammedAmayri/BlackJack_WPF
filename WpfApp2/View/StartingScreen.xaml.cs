@@ -18,11 +18,18 @@ namespace WpfApp2
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class StartingScreen : Window
     {
-        public MainWindow()
+        public StartingScreen()
         {
             InitializeComponent();
+        }
+
+        private void StartGame_Btn(object sender, RoutedEventArgs e)
+        {
+            MainScreen mainScreen = new MainScreen();
+            mainScreen.Show();
+            this.Close();
         }
     }
 }

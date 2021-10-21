@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfApp2.Model
 {
-    class Dealer
+    public class Dealer : ObservableObject
     {
         #region fields
         private string _name;
@@ -24,7 +24,7 @@ namespace WpfApp2.Model
             set
             {
                 _name = value;
-               //OnPropertyChanged(nameof(Name));
+               OnPropertyChanged(nameof(Name));
             }
         }
 
@@ -34,7 +34,7 @@ namespace WpfApp2.Model
             set
             {
                 _cardTotal = value;
-               //OnPropertyChanged(nameof(CardTotal));
+               OnPropertyChanged(nameof(CardTotal));
             }
         }
 
@@ -44,7 +44,7 @@ namespace WpfApp2.Model
             set
             {
                 _card = value;
-               //OnPropertyChanged(nameof(Card));
+               OnPropertyChanged(nameof(Card));
             }
         }
 
@@ -54,7 +54,7 @@ namespace WpfApp2.Model
             set
             {
                 _hiddenCard = value;
-               //OnPropertyChanged(nameof(Player));
+               OnPropertyChanged(nameof(Player));
             }
         }
 
@@ -64,7 +64,7 @@ namespace WpfApp2.Model
             set
             {
                 _hiddenCardTotal = value;
-               //OnPropertyChanged(nameof(HiddenCardTotal));
+               OnPropertyChanged(nameof(HiddenCardTotal));
             }
         }
         #endregion
