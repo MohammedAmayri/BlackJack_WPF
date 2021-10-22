@@ -45,61 +45,63 @@
                 </Grid.RowDefinitions>
                 <!--Player Name-->
                 <Label Grid.Row="0" Grid.Column="0" Content="Player:" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" ></Label>
-                <TextBlock Text="" HorizontalAlignment="Left" VerticalAlignment="Center"  FontSize="15" Foreground="White" Grid.Column="1" Grid.Row="0"  Grid.ColumnSpan="3" >PName</TextBlock>
+                <TextBlock Text="{Binding Player.Name}" HorizontalAlignment="Left" VerticalAlignment="Center"  FontSize="15" Foreground="White" Grid.Column="1" Grid.Row="0"  Grid.ColumnSpan="3" ></TextBlock>
                 <!--Dealer Name-->
-                <Label Grid.Column="0" Grid.Row="1" Content="Dealer:" FontSize="15" Foreground="White"  HorizontalAlignment="right" VerticalAlignment="top"/>
+                <Label Grid.Column="0" Grid.Row="1" Content="Dealer:" FontSize="15" Foreground="White"  HorizontalAlignment="right" VerticalAlignment="top" />
 
-                <TextBlock Text="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 5 0 0"  FontSize="15" Foreground="White" Grid.Column="1" Grid.Row="1"  Grid.ColumnSpan="3" >DName</TextBlock>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 5 0 0"  FontSize="15" Foreground="White" Grid.Column="1" Grid.Row="1"  Grid.ColumnSpan="3" Text="{Binding Dealer.Name}" ></TextBlock>
                 <!-- Dealer Count -->
-                <TextBlock Text="" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Margin="46,0,0,4" FontSize="25" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left">DealerPoints</TextBlock>
+                <TextBlock Text="{Binding Dealer.CardTotal}" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Margin="46,0,0,4" FontSize="25" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+
                 <!-- Player Conut -->
-                <TextBlock Text="" Grid.Column="2" Grid.Row="3"  Grid.ColumnSpan="2" FontSize="25" Margin="48,0,0,29"
-             VerticalAlignment="Bottom" HorizontalAlignment="Left" Foreground="White">PlayerCount</TextBlock>
+                <TextBlock Text="{Binding Player.CardTotal}" Grid.Column="2" Grid.Row="3"  Grid.ColumnSpan="2" FontSize="25" Margin="48,0,0,29"
+             VerticalAlignment="Bottom" HorizontalAlignment="Left" Foreground="White"></TextBlock>
             </Grid>
             <Canvas Grid.Column="0" Grid.Row="0">
 
                 <!-- Dealer Cards -->
                 <Canvas Grid.Column="0" Grid.Row="0">
-                    <Image Canvas.Left="430" Canvas.Top="21" Width="115"></Image>
-                    <Image  Canvas.Left="460" Canvas.Top="21" Width="115"></Image>
-                    <Image  Canvas.Left="490" Canvas.Top="21" Width="115"></Image>
-                    <Image  Canvas.Left="520" Canvas.Top="21" Width="115"></Image>
-                    <Image  Canvas.Left="550" Canvas.Top="21" Width="115"></Image>
-                    <Image  Canvas.Left="580" Canvas.Top="21" Width="115"></Image>
-                    <Image  Canvas.Left="610" Canvas.Top="21" Width="115"></Image>
-                    <Image  Canvas.Left="640" Canvas.Top="21" Width="115"></Image>
-                    <Image  Canvas.Left="670" Canvas.Top="21" Width="115"></Image>
-                    <Image  Canvas.Left="700" Canvas.Top="21" Width="115"></Image>
+                    <Image Source="{Binding Dealer.Card[0]}" Canvas.Left="400" Canvas.Top="21" Width="115"></Image>
+                    <Image Source="{Binding Dealer.Card[1]}" Canvas.Left="430" Canvas.Top="21" Width="115"></Image>
+                    <Image Source="{Binding Dealer.Card[2]}" Canvas.Left="460" Canvas.Top="21" Width="115"></Image>
+                    <Image Source="{Binding Dealer.Card[3]}" Canvas.Left="490" Canvas.Top="21" Width="115"></Image>
+                    <Image Source="{Binding Dealer.Card[4]}" Canvas.Left="520" Canvas.Top="21" Width="115"></Image>
+                    <Image Source="{Binding Dealer.Card[5]}" Canvas.Left="550" Canvas.Top="21" Width="115"></Image>
+                    <Image Source="{Binding Dealer.Card[6]}" Canvas.Left="580" Canvas.Top="21" Width="115"></Image>
+                    <Image Source="{Binding Dealer.Card[7]}" Canvas.Left="610" Canvas.Top="21" Width="115"></Image>
+                    <Image Source="{Binding Dealer.Card[8]}" Canvas.Left="640" Canvas.Top="21" Width="115"></Image>
+                    <Image Source="{Binding Dealer.Card[9]}" Canvas.Left="670" Canvas.Top="21" Width="115"></Image>
                 </Canvas>
             </Canvas>
             <!-- Player Cards -->
             <Canvas Grid.Column="0" Grid.Row="0">
-                <Image  Canvas.Left="430" Canvas.Top="405" Width="115"></Image>
-                <Image  Canvas.Left="460" Canvas.Top="405" Width="115"></Image>
-                <Image  Canvas.Left="490" Canvas.Top="405" Width="115"></Image>
-                <Image  Canvas.Left="520" Canvas.Top="405" Width="115"></Image>
-                <Image  Canvas.Left="550" Canvas.Top="405" Width="115"></Image>
-                <Image  Canvas.Left="580" Canvas.Top="405" Width="115"></Image>
-                <Image  Canvas.Left="610" Canvas.Top="405" Width="115"></Image>
-                <Image  Canvas.Left="640" Canvas.Top="405" Width="115"></Image>
-                <Image  Canvas.Left="670" Canvas.Top="405" Width="115"></Image>
-                <Image  Canvas.Left="700" Canvas.Top="405" Width="115"></Image>
+                <Image Source="{Binding Player.Card[0]}" Canvas.Left="400" Canvas.Top="230" Width="115"></Image>
+                <Image Source="{Binding Player.Card[1]}" Canvas.Left="430" Canvas.Top="230" Width="115"></Image>
+                <Image Source="{Binding Player.Card[2]}" Canvas.Left="460" Canvas.Top="230" Width="115"></Image>
+                <Image Source="{Binding Player.Card[3]}" Canvas.Left="490" Canvas.Top="230" Width="115"></Image>
+                <Image Source="{Binding Player.Card[4]}" Canvas.Left="520" Canvas.Top="230" Width="115"></Image>
+                <Image Source="{Binding Player.Card[5]}" Canvas.Left="550" Canvas.Top="230" Width="115"></Image>
+                <Image Source="{Binding Player.Card[6]}" Canvas.Left="580" Canvas.Top="230" Width="115"></Image>
+                <Image Source="{Binding Player.Card[7]}" Canvas.Left="610" Canvas.Top="230" Width="115"></Image>
+                <Image Source="{Binding Player.Card[8]}" Canvas.Left="640" Canvas.Top="230" Width="115"></Image>
+                <Image Source="{Binding Player.Card[9]}" Canvas.Left="670" Canvas.Top="230" Width="115"></Image>
             </Canvas>
 
             <!-- Bet Chips CHECK FOR VALUES FOR "Click" and "IsEnabled"-->
             <Canvas>
-                <Button Canvas.Top="189" Name="PlayerBet1"  IsEnabled="true" Style="{StaticResource ChangeOne}" Canvas.Left="18"/>
+                <Button Canvas.Top="189" Name="PlayerBet1"   Style="{StaticResource ChangeOne}" Click="BetButton_Click" Visibility="{Binding CanBet, Converter={StaticResource BoolToVis}, FallbackValue=Visible}" Canvas.Left="18"/>
 
-                <Button Width="100" Canvas.Left="132" Canvas.Top="243" Name="PlayerBet5"  IsEnabled="true" Style="{StaticResource Changefive}"/>
+                <Button Width="100" Canvas.Left="132" Canvas.Top="243" Name="PlayerBet5"  Click="BetButton_Click" Visibility="{Binding CanBet, Converter={StaticResource BoolToVis}, FallbackValue=Visible}" Style="{StaticResource Changefive}"/>
 
-                <Button Width="100" Canvas.Left="271" Canvas.Top="265" Name="PlayerBet10"  IsEnabled="true" Style="{StaticResource Changeten}"/>
+                <Button Width="100" Canvas.Left="271" Canvas.Top="265" Name="PlayerBet10" Click="BetButton_Click" Visibility="{Binding CanBet, Converter={StaticResource BoolToVis}, FallbackValue=Visible}"  Style="{StaticResource Changeten}"/>
 
 
-                <Button Width="100" Canvas.Left="512" Canvas.Top="271" Name="PlayerBet25"  IsEnabled="true" Style="{StaticResource Changetwentyfive}"/>
+                <Button Width="100" Canvas.Left="512" Canvas.Top="271" Name="PlayerBet25"  Click="BetButton_Click" Visibility="{Binding CanBet, Converter={StaticResource BoolToVis}, FallbackValue=Visible}"  Style="{StaticResource Changetwentyfive}"/>
 
-                <Button  Width="100" Canvas.Left="644" Canvas.Top="249" Name="PlayerBet50"  IsEnabled="true" Style="{StaticResource Changefifty}"/>
+                <Button  Width="100" Canvas.Left="644" Canvas.Top="249" Name="PlayerBet50"  Click="BetButton_Click" Visibility="{Binding CanBet, Converter={StaticResource BoolToVis}, FallbackValue=Visible}"  Style="{StaticResource Changefifty}"/>
 
-                <Button  Width="100" Canvas.Left="758" Canvas.Top="195" Name="PlayerBet100"  IsEnabled="true" Style="{StaticResource Changeonehundred}"/>
+                <Button  Width="100" Canvas.Left="758" Canvas.Top="195" Name="PlayerBet100"  Click="BetButton_Click" Visibility="{Binding CanBet, Converter={StaticResource BoolToVis}, FallbackValue=Visible}"
+                         Style="{StaticResource Changeonehundred}"/>
             </Canvas>
 
             <!-- User Interface -->
@@ -118,19 +120,26 @@
 
                 <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20 0 0 0">
                     <Label Content="Total Bet :"  Name="Unknown"   FontSize="25" Margin="10 0 0 0 " Foreground="Red"/>
-                    <TextBlock Text="" FontSize="25" Foreground="Red" Margin="0 5 0 0">Hello</TextBlock>
+                    <TextBlock Text="{Binding Player.TotalBet, StringFormat={}{0:c2}, FallbackValue=$0.00}" FontSize="25" Foreground="Red" Margin="0 5 0 0"></TextBlock>
                 </StackPanel>
 
                 <!-- Total win-->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="3">
                     <Label Content="Total Win :" FontSize="25" Foreground="Green" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <TextBlock Text="" FontSize="25" Foreground="Green" Margin="0 5 0 0">Hello</TextBlock>
+                    <TextBlock FontSize="25" Foreground="Green" Margin="0 5 0 0" Text="{Binding Player.TotalWinnings, StringFormat={}{0:c2}, FallbackValue=$0.00}"></TextBlock>
                 </StackPanel>
 
                 <!--Bankroll-->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="0" Grid.ColumnSpan="3">
                     <Label Content="Bankroll   :" FontSize="25" Foreground="Green" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                    <TextBlock Text="" FontSize="25" Foreground="Green" Margin="0 5 0 0">Hello</TextBlock>
+                    <TextBlock Text="{Binding Player.BankRoll, StringFormat={}{0:c2}}" FontSize="25" Foreground="Green" Margin="0 5 0 0"/>
+                </StackPanel>
+
+
+                <!-- Messages -->
+                <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="3"  Margin="10, 0, 0, 0">
+                    <Label Content="Messages:" Foreground="LawnGreen" FontSize="20" FontWeight="Bold" ></Label>
+                    <TextBlock Margin="5" Text="{Binding Messages}" FontSize="18" Foreground="White" ></TextBlock>
                 </StackPanel>
             </Grid>
 
@@ -139,15 +148,15 @@
                 <Label Content="Actions!" Foreground="White" FontSize="40" Canvas.Left="374" Canvas.Top="-68"></Label>
                 <StackPanel Canvas.Left="321" Canvas.Top="-5" Orientation="Vertical">
                     <StackPanel Orientation="Horizontal">
-                        <Button  Margin="0 0 0 0" IsEnabled="{Binding CanClick}" Style="{StaticResource ChangeHitButton}"/>
-                        <Button IsEnabled="{Binding CanClick}" Style="{StaticResource ChangeStandButton}"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <!--  <Button  x:Name="NextRound"/> -->
-                        <Button HorizontalAlignment="Center"  x:Name="Deal" Style="{StaticResource ChangeDealButton}"  />
-                        <!--CHECK LATER-->
+                        <Button  Margin="0 0 0 0" IsEnabled="{Binding CanClick}" Click="HitButton_Click" Style="{StaticResource ChangeHitButton}"/>
+                        <Button IsEnabled="{Binding CanClick}" Click="StandButton_Click" Style="{StaticResource ChangeStandButton}"/>
                     </StackPanel>
                 </StackPanel>
+
+            </Canvas>
+            <Canvas Grid.Column="0" Grid.Row="1">
+                <Button Click="ActionButton_Click" Name="NextRound" Style="{StaticResource ChangeNewRoundButton}" Canvas.Left="315" Canvas.Top="57"  Visibility="{Binding IsVisible, Converter={StaticResource BoolToVis}, FallbackValue=visible}"/>
+                <Button Click="ActionButton_Click" Name="Deal" Style="{StaticResource ChangeDealButton}" Visibility="{Binding CanBet, Converter={StaticResource BoolToVis}, FallbackValue=Visible}" Canvas.Left="316" Canvas.Top="42" />
             </Canvas>
         </Grid>
     </Grid>

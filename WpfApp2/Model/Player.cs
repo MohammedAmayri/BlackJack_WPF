@@ -100,7 +100,8 @@ namespace WpfApp2.Model
         #region Constructor
         public Player(string name)
         {
-            _name = name;
+            Name = name;
+            BankRoll = 100;
             Card = new List<string>();
         }
         #endregion

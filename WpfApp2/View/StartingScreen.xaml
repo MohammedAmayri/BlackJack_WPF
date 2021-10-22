@@ -14,7 +14,7 @@
         <Canvas>
             <!-- Player Name-->
 
-            <TextBox Name="UserName"  Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20" Canvas.Left="294" Canvas.Top="293" Width="222" Text="Please Enter Your Name"  Background="NavajoWhite"/>
+            <TextBox Name="UserName"  Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20" Canvas.Left="294" Canvas.Top="293" Width="222" Text="Please Enter Your Name" TextAlignment="Center"  Background="NavajoWhite"/>
             
             <!--Start Button-->
             <Button Canvas.Bottom="50" Canvas.Left="308"   Style="{StaticResource ChangeStartBtn}" Canvas.Top="325" Click="StartGame_Btn"></Button>

@@ -67,7 +67,7 @@ namespace WpfApp2.Model
         public string DealCard()
         {
             Random random = new Random();
-            int r = random.Next(0, cards.Count);
+            int r = random.Next(1, cards.Count);
             string chosenCard = cards[r];
             selectedCards.Add(chosenCard);
             cards.Remove(chosenCard);

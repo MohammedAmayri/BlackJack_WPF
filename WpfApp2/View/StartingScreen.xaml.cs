@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp2.View.ViewModels;
 
 namespace WpfApp2
 {
@@ -27,9 +28,13 @@ namespace WpfApp2
 
         private void StartGame_Btn(object sender, RoutedEventArgs e)
         {
-            MainScreen mainScreen = new MainScreen();
+            GameViewModel gameViewModel = new GameViewModel(UserName.Text);
+            MainScreen mainScreen = new MainScreen(gameViewModel);
+            mainScreen.DataContext = gameViewModel;
             mainScreen.Show();
             this.Close();
         }
+
+
     }
 }

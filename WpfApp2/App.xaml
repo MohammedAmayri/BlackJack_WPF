@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
               Startup="Application_Startup">
     <Application.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
         <Style x:Key="ChangeStartBtn" TargetType="{x:Type Button}">
             <Setter Property="OverridesDefaultStyle" Value="True"/>
             <Setter Property="Width" Value="200" />
@@ -421,6 +422,44 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <Style x:Key="ChangeNewRoundButton" TargetType="{x:Type Button}">
+                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                <Setter Property="Width" Value="200" />
+                <Setter Property="Margin" Value="25 0 0 0"/>
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Name="border" 
+                            BorderThickness="0"
+                            Padding="0" 
+                            BorderBrush="Transparent" 
+                            CornerRadius="0" 
+                            Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="False">
+                        <Setter Property="Content">
+                            <Setter.Value>
+                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\UserInterface\NextRoundButton.png"/>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Content">
+                            <Setter.Value>
+                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\UserInterface\NextRoundButtonHover.png"/>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+        
 
     </Application.Resources>
 </Application>
