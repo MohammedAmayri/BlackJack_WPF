@@ -8,6 +8,385 @@
 
   <ItemGroup>
     <None Remove="Background.png" />
+    <None Remove="Images\Cards\b1fv.bmp" />
+    <None Remove="Images\Cards\b2fv.bmp" />
+    <None Remove="Images\Cards\blank.bmp" />
+    <None Remove="Images\Cards\c01.bmp" />
+    <None Remove="Images\Cards\c02.bmp" />
+    <None Remove="Images\Cards\c03.bmp" />
+    <None Remove="Images\Cards\c04.bmp" />
+    <None Remove="Images\Cards\c05.bmp" />
+    <None Remove="Images\Cards\c06.bmp" />
+    <None Remove="Images\Cards\c07.bmp" />
+    <None Remove="Images\Cards\c08.bmp" />
+    <None Remove="Images\Cards\c09.bmp" />
+    <None Remove="Images\Cards\c10.bmp" />
+    <None Remove="Images\Cards\c11.bmp" />
+    <None Remove="Images\Cards\c12.bmp" />
+    <None Remove="Images\Cards\c13.bmp" />
+    <None Remove="Images\Cards\d01.bmp" />
+    <None Remove="Images\Cards\d02.bmp" />
+    <None Remove="Images\Cards\d03.bmp" />
+    <None Remove="Images\Cards\d04.bmp" />
+    <None Remove="Images\Cards\d05.bmp" />
+    <None Remove="Images\Cards\d06.bmp" />
+    <None Remove="Images\Cards\d07.bmp" />
+    <None Remove="Images\Cards\d08.bmp" />
+    <None Remove="Images\Cards\d09.bmp" />
+    <None Remove="Images\Cards\d10.bmp" />
+    <None Remove="Images\Cards\d11.bmp" />
+    <None Remove="Images\Cards\d12.bmp" />
+    <None Remove="Images\Cards\d13.bmp" />
+    <None Remove="Images\Cards\h01.bmp" />
+    <None Remove="Images\Cards\h02.bmp" />
+    <None Remove="Images\Cards\h03.bmp" />
+    <None Remove="Images\Cards\h04.bmp" />
+    <None Remove="Images\Cards\h05.bmp" />
+    <None Remove="Images\Cards\h06.bmp" />
+    <None Remove="Images\Cards\h07.bmp" />
+    <None Remove="Images\Cards\h08.bmp" />
+    <None Remove="Images\Cards\h09.bmp" />
+    <None Remove="Images\Cards\h10.bmp" />
+    <None Remove="Images\Cards\h11.bmp" />
+    <None Remove="Images\Cards\h12.bmp" />
+    <None Remove="Images\Cards\h13.bmp" />
+    <None Remove="Images\Cards\s01.bmp" />
+    <None Remove="Images\Cards\s02.bmp" />
+    <None Remove="Images\Cards\s03.bmp" />
+    <None Remove="Images\Cards\s04.bmp" />
+    <None Remove="Images\Cards\s05.bmp" />
+    <None Remove="Images\Cards\s06.bmp" />
+    <None Remove="Images\Cards\s07.bmp" />
+    <None Remove="Images\Cards\s08.bmp" />
+    <None Remove="Images\Cards\s09.bmp" />
+    <None Remove="Images\Cards\s10.bmp" />
+    <None Remove="Images\Cards\s11.bmp" />
+    <None Remove="Images\Cards\s12.bmp" />
+    <None Remove="Images\Cards\s13.bmp" />
+    <None Remove="Images\Chips\Fifty.png" />
+    <None Remove="Images\Chips\FiftyDisabled.png" />
+    <None Remove="Images\Chips\FiftyHover.png" />
+    <None Remove="Images\Chips\Five.png" />
+    <None Remove="Images\Chips\FiveDisabled.png" />
+    <None Remove="Images\Chips\FiveHover.png" />
+    <None Remove="Images\Chips\One.png" />
+    <None Remove="Images\Chips\OneDisabled.png" />
+    <None Remove="Images\Chips\OneHover.png" />
+    <None Remove="Images\Chips\OneHundred.png" />
+    <None Remove="Images\Chips\OneHundredDisabled.png" />
+    <None Remove="Images\Chips\OneHundredHover.png" />
+    <None Remove="Images\Chips\Ten.png" />
+    <None Remove="Images\Chips\TenDisabled.png" />
+    <None Remove="Images\Chips\TenHover.png" />
+    <None Remove="Images\Chips\TwentyFive.png" />
+    <None Remove="Images\Chips\TwentyFiveDisabled.png" />
+    <None Remove="Images\Chips\TwentyFiveHover.png" />
+    <None Remove="Images\GameBoard\GameBoardBackground.png" />
+    <None Remove="Images\GameBoard\MyBoardTable.png" />
+    <None Remove="Images\GameOverScreen\GameOverBackground.png" />
+    <None Remove="Images\StartScreen\Background.png" />
+    <None Remove="Images\StartScreen\StartBtn.png" />
+    <None Remove="Images\StartScreen\StartBtnHover.png" />
+    <None Remove="Images\UserInterface\Bet.png" />
+    <None Remove="Images\UserInterface\BetDisabled.png" />
+    <None Remove="Images\UserInterface\BetHover.png" />
+    <None Remove="Images\UserInterface\BetHover2.png" />
+    <None Remove="Images\UserInterface\Hit.png" />
+    <None Remove="Images\UserInterface\HitDisabled.png" />
+    <None Remove="Images\UserInterface\HitHover.png" />
+    <None Remove="Images\UserInterface\HitHover2.png" />
+    <None Remove="Images\UserInterface\NextRoundButton.png" />
+    <None Remove="Images\UserInterface\NextRoundButtonHover.png" />
+    <None Remove="Images\UserInterface\Stand.png" />
+    <None Remove="Images\UserInterface\StandDisabled.png" />
+    <None Remove="Images\UserInterface\StandHover.png" />
+    <None Remove="Images\UserInterface\StandHover2.png" />
+    <None Remove="Sounds\BackGroundMusic.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\Cards\b1fv.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\b2fv.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\blank.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\c01.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\c02.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\c03.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\c04.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\c05.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\c06.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\c07.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\c08.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\c09.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\c10.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\c11.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\c12.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\c13.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\d01.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\d02.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\d03.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\d04.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\d05.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\d06.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\d07.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\d08.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\d09.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\d10.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\d11.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\d12.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\d13.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\h01.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\h02.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\h03.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\h04.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\h05.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\h06.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\h07.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\h08.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\h09.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\h10.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\h11.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\h12.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\h13.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\s01.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\s02.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\s03.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\s04.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\s05.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\s06.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\s07.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\s08.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\s09.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\s10.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\s11.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\s12.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Cards\s13.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\Fifty.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\FiftyDisabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\FiftyHover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\Five.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\FiveDisabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\FiveHover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\One.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\OneDisabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\OneHover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\OneHundred.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\OneHundredDisabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\OneHundredHover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\Ten.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\TenDisabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\TenHover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\TwentyFive.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\TwentyFiveDisabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Chips\TwentyFiveHover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GameBoard\GameBoardBackground.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GameBoard\MyBoardTable.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GameOverScreen\GameOverBackground.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\StartScreen\Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\StartScreen\StartBtn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\StartScreen\StartBtnHover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserInterface\Bet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserInterface\BetDisabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserInterface\BetHover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserInterface\BetHover2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserInterface\Hit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserInterface\HitDisabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserInterface\HitHover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserInterface\HitHover2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserInterface\NextRoundButton.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserInterface\NextRoundButtonHover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserInterface\Stand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserInterface\StandDisabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserInterface\StandHover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserInterface\StandHover2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\BackGroundMusic.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

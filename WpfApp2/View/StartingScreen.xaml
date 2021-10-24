@@ -8,7 +8,7 @@
         Title="StartingScreen" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
        >
     <Window.Background>
-        <ImageBrush ImageSource="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\StartScreen\Background.png" />
+        <ImageBrush ImageSource="../Images/StartScreen/Background.png" />
     </Window.Background>
     <Grid>
         <Canvas>

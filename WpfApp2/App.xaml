@@ -26,14 +26,14 @@
                 <Trigger Property="IsMouseOver" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\StartScreen\StartBtn.png"/>
+                            <Image Source="../Images/StartScreen/StartBtn.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\StartScreen\StartBtnHover.png"/>
+                            <Image Source="../Images/StartScreen/StartBtnHover.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
@@ -62,21 +62,21 @@
                 <Trigger Property="IsMouseOver" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\one.png"/>
+                            <Image Source="../Images/Chips/one.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\OneHover.png"/>
+                            <Image Source="../Images/Chips/OneHover.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsEnabled" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\OneDisabled.png"/>
+                            <Image Source="../Images/Chips/OneDisabled.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
@@ -105,21 +105,21 @@
                 <Trigger Property="IsMouseOver" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\five.png"/>
+                            <Image Source="../Images/Chips/five.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\fiveHover.png"/>
+                            <Image Source="../Images/Chips/fiveHover.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsEnabled" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\fiveDisabled.png"/>
+                            <Image Source="../Images/Chips/fiveDisabled.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
@@ -148,21 +148,21 @@
                 <Trigger Property="IsMouseOver" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\ten.png"/>
+                            <Image Source="../Images/Chips/ten.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\tenHover.png"/>
+                            <Image Source="../Images/Chips/tenHover.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsEnabled" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\tenDisabled.png"/>
+                            <Image Source="../Images/Chips/tenDisabled.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
@@ -191,21 +191,21 @@
                 <Trigger Property="IsMouseOver" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\twentyfive.png"/>
+                            <Image Source="../Images/Chips/twentyfive.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\twentyfiveHover.png"/>
+                            <Image Source="../Images/Chips/twentyfiveHover.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsEnabled" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\twentyfiveDisabled.png"/>
+                            <Image Source="../Images/Chips/twentyfiveDisabled.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
@@ -234,21 +234,21 @@
                 <Trigger Property="IsMouseOver" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\fifty.png"/>
+                            <Image Source="../Images/Chips/fifty.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\fiftyHover.png"/>
+                            <Image Source="../Images/Chips/fiftyHover.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsEnabled" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\fiftyDisabled.png"/>
+                            <Image Source="../Images/Chips/fiftyDisabled.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
@@ -277,21 +277,21 @@
                 <Trigger Property="IsMouseOver" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\onehundred.png"/>
+                            <Image Source="../Images/Chips/onehundred.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\onehundredHover.png"/>
+                            <Image Source="../Images/Chips/onehundredHover.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsEnabled" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\Chips\onehundredDisabled.png"/>
+                            <Image Source="../Images/Chips/onehundredDisabled.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
@@ -321,21 +321,21 @@
                 <Trigger Property="IsMouseOver" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\UserInterface\Hit.png" Stretch="Fill"/>
+                            <Image Source="../Images/UserInterface/Hit.png" Stretch="Fill"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\UserInterface\HitHover.png" Stretch="Fill"/>
+                            <Image Source="../Images/UserInterface/HitHover.png" Stretch="Fill"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsEnabled" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\UserInterface\HitDisabled.png" Stretch="Fill"/>
+                            <Image Source="../Images/UserInterface/HitDisabled.png" Stretch="Fill"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
@@ -366,21 +366,21 @@
                 <Trigger Property="IsMouseOver" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                    <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\UserInterface\Stand.png" Stretch="Fill"/>
+                    <Image Source="../Images/UserInterface/Stand.png" Stretch="Fill"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\UserInterface\StandHover.png" Stretch="Fill"/>
+                            <Image Source="../Images/UserInterface/StandHover.png" Stretch="Fill"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsEnabled" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\UserInterface\StandDisabled.png" Stretch="Fill"/>
+                            <Image Source="../Images/UserInterface/StandDisabled.png" Stretch="Fill"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
@@ -409,14 +409,14 @@
                 <Trigger Property="IsMouseOver" Value="False">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\UserInterface\Bet.png"/>
+                            <Image Source="../Images/UserInterface/Bet.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Content">
                         <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\UserInterface\BetHover.png"/>
+                            <Image Source="../Images/UserInterface/BetHover.png"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
@@ -445,14 +445,14 @@
                     <Trigger Property="IsMouseOver" Value="False">
                         <Setter Property="Content">
                             <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\UserInterface\NextRoundButton.png"/>
+                            <Image Source="../Images/UserInterface/NextRoundButton.png"/>
                             </Setter.Value>
                         </Setter>
                     </Trigger>
                     <Trigger Property="IsMouseOver" Value="True">
                         <Setter Property="Content">
                             <Setter.Value>
-                            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\UserInterface\NextRoundButtonHover.png"/>
+                            <Image Source="../Images/UserInterface/NextRoundButtonHover.png"/>
                             </Setter.Value>
                         </Setter>
                     </Trigger>
