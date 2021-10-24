@@ -84,6 +84,7 @@
     <None Remove="Images\GameBoard\GameBoardBackground.png" />
     <None Remove="Images\GameBoard\MyBoardTable.png" />
     <None Remove="Images\GameOverScreen\GameOverBackground.png" />
+    <None Remove="Images\Icon.png" />
     <None Remove="Images\StartScreen\Background.png" />
     <None Remove="Images\StartScreen\StartBtn.png" />
     <None Remove="Images\StartScreen\StartBtnHover.png" />
@@ -331,6 +332,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\GameOverScreen\GameOverBackground.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\StartScreen\Background.png">

@@ -5,13 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp2"
       mc:Ignorable="d" 
-      Title="BlackJack" Height="680" Width="900"
+      Title="BlackJack 2021" Icon="../Images/Icon.png" Height="680" Width="900"
        WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\GameBoard\GameBoardBackground.png"></ImageBrush>
+            <ImageBrush ImageSource="../Images/GameBoard/GameBoardBackground.png"></ImageBrush>
         </Grid.Background>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -21,7 +21,7 @@
                 <RowDefinition Height="3*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\GameBoard\MyBoardTable.png" Grid.Column="0" Grid.Row="0" Margin="0,-68,0,129" Grid.RowSpan="2"></Image>
+            <Image Source="../Images/GameBoard/MyBoardTable.png" Grid.Column="0" Grid.Row="0" Margin="0,-68,0,129" Grid.RowSpan="2"></Image>
             <Grid Grid.Column="0" Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>

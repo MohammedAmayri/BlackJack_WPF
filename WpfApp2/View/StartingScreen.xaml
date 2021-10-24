@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="StartingScreen" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Title="Welcome" Icon="../Images/Icon.png" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
        >
     <Window.Background>
         <ImageBrush ImageSource="../Images/StartScreen/Background.png" />
