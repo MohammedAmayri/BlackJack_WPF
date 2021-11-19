@@ -1,13 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
-    <UseWPF>true</UseWPF>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Background.png" />
+    <None Remove="GameOverScreen.xaml" />
     <None Remove="Images\Cards\b1fv.bmp" />
     <None Remove="Images\Cards\b2fv.bmp" />
     <None Remove="Images\Cards\blank.bmp" />
@@ -102,7 +100,6 @@
     <None Remove="Images\UserInterface\StandDisabled.png" />
     <None Remove="Images\UserInterface\StandHover.png" />
     <None Remove="Images\UserInterface\StandHover2.png" />
-    <None Remove="Sounds\BackGroundMusic.wav" />
   </ItemGroup>
 
   <ItemGroup>
@@ -388,17 +385,14 @@
     <Content Include="Images\UserInterface\StandHover2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sounds\BackGroundMusic.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 
   <ItemGroup>
-    <Page Include="App.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\GameCardLib\GameCardLib.csproj" />
+    <Page Include="GameOverScreen.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 
 </Project>

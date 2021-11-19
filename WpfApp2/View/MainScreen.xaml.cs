@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp2.View.ViewModels;
+using GameCardLib.ViewModels;
+using System.Media;
 
 namespace WpfApp2
 {
@@ -26,8 +28,21 @@ namespace WpfApp2
         {
             InitializeComponent();
             _gameViewModel = gameViewModel;
+            //Player for the sound effects
+            SoundPlayer soundPlayer = new SoundPlayer();
+            soundPlayer.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\Sounds\\BackGroundMusic.wav"; //Change
+            soundPlayer.PlayLooping();
         }
-
+        private void GameOver()
+        {
+            GameOverScreen gameOverScreen = new GameOverScreen();
+            gameOverScreen.Show();
+            // To close all the other windows
+            foreach (Window item in Application.Current.Windows)
+            {
+                if (item.DataContext == this) item.Close();
+            }
+        }
         private void BetButton_Click(object sender, RoutedEventArgs e)
         {
             Button BetButton = sender as Button;
@@ -63,13 +78,12 @@ namespace WpfApp2
         private void StandButton_Click(object sender, RoutedEventArgs e)
         {
             _gameViewModel.PlayerStand();
-
         }
 
         private void ActionButton_Click(object sender, RoutedEventArgs e)
         {
             Button ActionButton = sender as Button;
-            _gameViewModel.ActionButtonCommand(ActionButton.Name);
+            _gameViewModel.ActionButtonCommand(ActionButton.Name,GameOver,() => MessageBox.Show("The cards are now reshuffled"));
         }
     }
       

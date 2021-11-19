@@ -5,12 +5,15 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using WpfApp2.Model;
+using GameCardLib.Model;
 
-namespace WpfApp2.View.ViewModels
+namespace GameCardLib.ViewModels
 {
     public class GameViewModel : ObservableObject
     {
+        #region Delegates
+        public delegate void OurDelegate();
+        #endregion
         #region fields
         private Player _player;
         private Dealer _dealer;
@@ -124,10 +127,7 @@ namespace WpfApp2.View.ViewModels
             Player = new Player(playerName);
             Dealer = new Dealer("Richard");
             _gameBoard = new GameBoard();
-            // Player for the sound effects
-            SoundPlayer soundPlayer = new SoundPlayer();
-            soundPlayer.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\Sounds\\BackGroundMusic.wav"; //Change
-            soundPlayer.PlayLooping();
+            
             InitializeGame();
         }
         private void InitializeGame()
@@ -270,7 +270,7 @@ namespace WpfApp2.View.ViewModels
         #endregion
 
         #region ActionButtonLogic
-        internal void PlayerHit()
+        public void PlayerHit()
         {
             if (_player.TotalBet >= 1)
             {
@@ -285,7 +285,7 @@ namespace WpfApp2.View.ViewModels
                 }
 
                 _player.CardTotal += cardValue1;
-                _player.Card.Add("../Images/Cards//" + card + ".bmp");
+                _player.Card.Add("../Images/Cards/" + card + ".bmp");
                 CheckPlayerWinCondition();
                 OnPropertyChanged(nameof(Player));
                 OnPropertyChanged(nameof(Messages));
@@ -297,7 +297,7 @@ namespace WpfApp2.View.ViewModels
             }
         }
 
-        internal void PlayerStand()
+        public void PlayerStand()
         {
             if (_player.TotalBet >= 1)
             {
@@ -327,7 +327,7 @@ namespace WpfApp2.View.ViewModels
                     dCardValue1 = 10;
                 }
                 _dealer.CardTotal += dCardValue1;
-                Dealer.Card.Add("../Images/Cards//" + dCard + ".bmp");
+                Dealer.Card.Add("../Images/Cards/" + dCard + ".bmp");
 
             }
             OnPropertyChanged(nameof(Dealer));
@@ -463,7 +463,7 @@ namespace WpfApp2.View.ViewModels
 
         #region ButtonCommands
 
-        internal void ActionButtonCommand(string actionName)
+        public void ActionButtonCommand(string actionName,OurDelegate gameOverDelegate, OurDelegate reshuffleDelegate)
         {
             switch (actionName)
             {
@@ -473,7 +473,7 @@ namespace WpfApp2.View.ViewModels
 
                     if (_player.BankRoll == 0)
                     {
-                        GameOver();
+                        gameOverDelegate();
                     }
                     else
                     {
@@ -489,6 +489,10 @@ namespace WpfApp2.View.ViewModels
                         Deal();
                     }
                     break;
+                case "Reshuffle":
+                    _gameBoard.Reshuffle();
+                   reshuffleDelegate();
+                    break;
                 default:
                     break;
             }
@@ -498,13 +502,8 @@ namespace WpfApp2.View.ViewModels
         #region Screens
         private void GameOver()
         {
-            GameOverScreen gameOverScreen = new GameOverScreen();
-            gameOverScreen.Show();
-            // To close all the other windows
-            foreach (Window item in Application.Current.Windows)
-            {
-                if (item.DataContext == this) item.Close();
-            }
+            // delegates to trigger the game over window?
+            Messages = "Game Over! Please start a new game!";
         }
 
         #endregion

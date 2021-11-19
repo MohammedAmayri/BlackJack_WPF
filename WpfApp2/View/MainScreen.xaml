@@ -157,6 +157,8 @@
             <Canvas Grid.Column="0" Grid.Row="1">
                 <Button Click="ActionButton_Click" Name="NextRound" Style="{StaticResource ChangeNewRoundButton}" Canvas.Left="315" Canvas.Top="57"  Visibility="{Binding IsVisible, Converter={StaticResource BoolToVis}, FallbackValue=visible}"/>
                 <Button Click="ActionButton_Click" Name="Deal" Style="{StaticResource ChangeDealButton}" Visibility="{Binding CanBet, Converter={StaticResource BoolToVis}, FallbackValue=Visible}" Canvas.Left="316" Canvas.Top="42" />
+                <Button Click="ActionButton_Click" Name="Reshuffle" Style="{StaticResource ChangeReshuffleBtn}" Visibility="{Binding CanBet, Converter={StaticResource BoolToVis}, FallbackValue=Visible}" Canvas.Top="57" Height="65" Canvas.Left="-38" />
+
             </Canvas>
         </Grid>
     </Grid>

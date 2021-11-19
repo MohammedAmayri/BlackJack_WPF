@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using WpfApp2.View.ViewModels;
 using WpfApp2.View;
+using GameCardLib.ViewModels;
 
 namespace WpfApp2
 {

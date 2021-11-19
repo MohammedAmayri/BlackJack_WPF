@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfApp2
+namespace GameCardLib
 {
     public class ObservableObject : INotifyPropertyChanged
     {
