@@ -395,4 +395,8 @@
     </Page>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EFBlackJacEL\EFBlackJacEL.csproj" />
+  </ItemGroup>
+
 </Project>

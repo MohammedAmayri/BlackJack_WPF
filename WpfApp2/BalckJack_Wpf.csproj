@@ -398,6 +398,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EFBlackJacEL\EFBlackJacEL.csproj" />
     <ProjectReference Include="..\GameCardLib\GameCardLib.csproj" />
   </ItemGroup>
 
