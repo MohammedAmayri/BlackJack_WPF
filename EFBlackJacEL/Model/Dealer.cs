@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,10 +16,18 @@ namespace GameCardLib.Model
         private List<string> _card;
         private string _hiddenCard;
         private int _hiddenCardTotal;
+        public Random random = new Random();
+        private int _DealerID;
         #endregion
 
         #region properties
-
+        [Key]
+        public int PlayerId
+        {
+            get => _DealerID;
+            set { _DealerID = random.Next(1, 10000); }
+        }
+        [Required]
         public string Name
         {
             get => _name;
@@ -38,6 +48,7 @@ namespace GameCardLib.Model
             }
         }
 
+        [NotMapped]
         public List<string> Card
         {
             get => _card;

@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BalckJack_Wpf", "WpfApp2\BalckJack_Wpf.csproj", "{CD61BE18-3281-469F-894B-1E2072C214F4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameCardLib", "GameCardLib\GameCardLib.csproj", "{5141876C-0CB4-4752-9619-A477942B1CBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFBlackJacBLL", "GameCardLib\EFBlackJacBLL.csproj", "{5141876C-0CB4-4752-9619-A477942B1CBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFBlackJacEL", "EFBlackJacEL\EFBlackJacEL.csproj", "{80B5C380-4D6A-4888-93B5-325FE5E36D7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFBlackJacEL", "EFBlackJacEL\EFBlackJacEL.csproj", "{80B5C380-4D6A-4888-93B5-325FE5E36D7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFBlackJacDAL", "EFBlackJacDAL\EFBlackJacDAL.csproj", "{E6976AA3-4AB7-4E8F-B5CC-48AF33943061}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{80B5C380-4D6A-4888-93B5-325FE5E36D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80B5C380-4D6A-4888-93B5-325FE5E36D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80B5C380-4D6A-4888-93B5-325FE5E36D7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6976AA3-4AB7-4E8F-B5CC-48AF33943061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6976AA3-4AB7-4E8F-B5CC-48AF33943061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6976AA3-4AB7-4E8F-B5CC-48AF33943061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6976AA3-4AB7-4E8F-B5CC-48AF33943061}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,6 +5,7 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using EFBlackJacEL.Model;
 using GameCardLib.Model;
 
 namespace GameCardLib.ViewModels
@@ -122,11 +123,13 @@ namespace GameCardLib.ViewModels
         #endregion
 
         #region Start Game
-        public GameViewModel(string playerName)
+        public GameViewModel(string playerName,int daysNoGame,int moneySpent)
         {
             Player = new Player(playerName);
             Dealer = new Dealer("Richard");
             _gameBoard = new GameBoard();
+            PlayingHabit playingHabit = new PlayingHabit(daysNoGame, moneySpent);
+            Player.PlayerPlayingHabbits = playingHabit;
             
             InitializeGame();
         }

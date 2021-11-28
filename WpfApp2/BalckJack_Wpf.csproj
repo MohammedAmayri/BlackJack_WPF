@@ -85,6 +85,7 @@
     <None Remove="Images\GameBoard\MyBoardTable.png" />
     <None Remove="Images\GameOverScreen\GameOverBackground.png" />
     <None Remove="Images\Icon.png" />
+    <None Remove="Images\PlayingHabitsBG.png" />
     <None Remove="Images\StartScreen\Background.png" />
     <None Remove="Images\StartScreen\StartBtn.png" />
     <None Remove="Images\StartScreen\StartBtnHover.png" />
@@ -394,12 +395,31 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Page Include="App.xaml" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\EFBlackJacEL\EFBlackJacEL.csproj" />
-    <ProjectReference Include="..\GameCardLib\GameCardLib.csproj" />
+    <ProjectReference Include="..\GameCardLib\EFBlackJacBLL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\PlayingHabitsBG.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

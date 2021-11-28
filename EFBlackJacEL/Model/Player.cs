@@ -1,5 +1,8 @@
-﻿using System;
+﻿using EFBlackJacEL.Model;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,9 +19,19 @@ namespace GameCardLib.Model
         private int? _cardTotal;
         private List<string> _card;
         private int _betAmount;
+        private int _WholeGameBetAmount=0;
+        public Random random = new Random();
+        private int _playerID ;
+        private PlayingHabit playingHabbits;
         #endregion
 
         #region properties
+        [Key]
+        public int PlayerId { 
+            get =>  _playerID ; 
+            set { _playerID = random.Next(1, 10000); } 
+        }
+        [Required]
         public string Name
         {
             get => _name;
@@ -38,6 +51,7 @@ namespace GameCardLib.Model
                OnPropertyChanged(nameof(BankRoll));
             }
         }
+
 
         //[JsonIgnore]
         public int TotalBet
@@ -72,8 +86,15 @@ namespace GameCardLib.Model
             }
         }
 
+        public PlayingHabit PlayerPlayingHabbits
+        {
+            set { playingHabbits = value; }
 
-        //[JsonIgnore]
+            get { return playingHabbits; }
+        }
+
+        
+        [NotMapped]
         public List<string> Card
         {
             get => _card;
@@ -91,8 +112,15 @@ namespace GameCardLib.Model
             set
             {
                 _betAmount = value;
+                _WholeGameBetAmount += _betAmount;
                OnPropertyChanged(nameof(BetAmount));
             }
+        }
+        [Required]
+        public int WholeGameBetAmount
+        {
+            get => _WholeGameBetAmount;
+            set { }
         }
 
         #endregion

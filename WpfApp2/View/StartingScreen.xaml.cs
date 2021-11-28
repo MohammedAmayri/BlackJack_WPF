@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp2.View.ViewModels;
 using GameCardLib.ViewModels;
+using BalckJack_Wpf.View;
 
 namespace WpfApp2
 {
@@ -29,10 +30,8 @@ namespace WpfApp2
 
         private void StartGame_Btn(object sender, RoutedEventArgs e)
         {
-            GameViewModel gameViewModel = new GameViewModel(UserName.Text);
-            MainScreen mainScreen = new MainScreen(gameViewModel);
-            mainScreen.DataContext = gameViewModel;
-            mainScreen.Show();
+            PlayingHabitsWindow playingHabits = new PlayingHabitsWindow(UserName.Text);
+            playingHabits.Show();
             this.Close();
         }
         public void TextBox_GotFocus(object sender, RoutedEventArgs e)
