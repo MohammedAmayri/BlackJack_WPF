@@ -160,6 +160,7 @@
                 <Button Click="ActionButton_Click" Name="Reshuffle" Style="{StaticResource ChangeReshuffleBtn}" Visibility="{Binding CanBet, Converter={StaticResource BoolToVis}, FallbackValue=Visible}" Canvas.Top="57" Height="65" Canvas.Left="-38" />
 
             </Canvas>
+            <Button Content="Button" HorizontalAlignment="Left" Height="147" Margin="368,234,0,0" VerticalAlignment="Top" Width="266" Click="Button_Click"/>
         </Grid>
     </Grid>
 </Window>

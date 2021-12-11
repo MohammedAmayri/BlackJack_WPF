@@ -396,6 +396,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EFBlackJacDAL\EFBlackJacDAL.csproj" />
     <ProjectReference Include="..\EFBlackJacEL\EFBlackJacEL.csproj" />
   </ItemGroup>
 

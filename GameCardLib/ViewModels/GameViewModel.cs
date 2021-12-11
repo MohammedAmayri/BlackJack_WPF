@@ -5,8 +5,10 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using EFBlackJacDAL;
 using EFBlackJacEL.Model;
 using GameCardLib.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace GameCardLib.ViewModels
 {
@@ -14,11 +16,15 @@ namespace GameCardLib.ViewModels
     {
         #region Delegates
         public delegate void OurDelegate();
+        public delegate void OurDelegate2(string str);
+        public delegate void OurDelegateForDataGrid(List<string> players);
         #endregion
         #region fields
         private Player _player;
         private Dealer _dealer;
         private GameBoard _gameBoard;
+        List<int> playerIds; // To be accessed by multiple methods 
+
         #endregion
 
         #region properties 
@@ -124,15 +130,18 @@ namespace GameCardLib.ViewModels
 
         #region Start Game
         public GameViewModel(string playerName,int daysNoGame,int moneySpent)
-        {
+        {   
             Player = new Player(playerName);
             Dealer = new Dealer("Richard");
             _gameBoard = new GameBoard();
             PlayingHabit playingHabit = new PlayingHabit(daysNoGame, moneySpent);
             Player.PlayerPlayingHabbits = playingHabit;
-            
+            playerIds = new List<int>();
             InitializeGame();
         }
+
+        
+
         private void InitializeGame()
         {
             CanBet = true;
@@ -466,7 +475,7 @@ namespace GameCardLib.ViewModels
 
         #region ButtonCommands
 
-        public void ActionButtonCommand(string actionName,OurDelegate gameOverDelegate, OurDelegate reshuffleDelegate)
+        public void ActionButtonCommand(string actionName,OurDelegate2 gameOverDelegate, OurDelegate reshuffleDelegate)
         {
             switch (actionName)
             {
@@ -476,7 +485,8 @@ namespace GameCardLib.ViewModels
 
                     if (_player.BankRoll == 0)
                     {
-                        gameOverDelegate();
+                        SaveToDB();
+                        gameOverDelegate("BYE BYE");
                     }
                     else
                     {
@@ -500,8 +510,70 @@ namespace GameCardLib.ViewModels
                     break;
             }
         }
+
+
         #endregion
 
+        #region DataBase
+        private void SaveToDB()
+        {
+            using GameDbContext _dbContext =new GameDbContext(); 
+            _dbContext.Players.Add(Player);
+            _dbContext.Dealers.Add(Dealer);
+            _dbContext.SaveChanges();
+        }
+         public void RetrieveData(OurDelegateForDataGrid dataGridDelegate)
+        {
+            List<string> PlayerListForGrid = new List<string>();
+            
+            PlayerListForGrid.Add("Player ID" + "\t" +"Player Name" + "\t" +"Number of days since last game" + "\t");
+            //To retrive the data from the DB using the DBContext
+            using GameDbContext _dbContext = new GameDbContext();
+            var players = (from player in _dbContext.Players
+                           select new
+                           {
+                               Name = player.Name,
+                               id = player.PlayerId,
+                               playingHabit=player.PlayerPlayingHabbits
+                           }).ToList();
+
+            foreach (var player in players)
+            {
+                PlayerListForGrid.Add(player.id + "\t" + player.Name + "\t" + player.playingHabit.NoGameDays + "\t");
+                playerIds.Add(Convert.ToInt32(player.id));
+            }
+            _dbContext.SaveChanges();
+            dataGridDelegate(PlayerListForGrid);
+
+
+        }
+        public void deleteData(int playerIdIndex)
+        {
+            int idToSearchFor = playerIds[playerIdIndex];
+            using (GameDbContext _dbContext = new GameDbContext())
+            {
+                var playerToRemove = _dbContext.Players.FirstOrDefault(x => x.PlayerId == idToSearchFor); //returns a single item.
+                
+                if (playerToRemove != null)
+                {
+                    //try
+                    //{
+                        _dbContext.Players.Attach(playerToRemove);
+                        _dbContext.Players.RemoveRange(playerToRemove);
+                        _dbContext.SaveChanges();
+                    //}
+                  
+                    //    catch (DbUpdateConcurrencyException ex)
+                    //{
+                    //    ex.Entries.Single().Reload();
+                    //    _dbContext.SaveChanges();
+                    //}
+                
+                }
+            }
+        }
+
+        #endregion
         #region Screens
         private void GameOver()
         {

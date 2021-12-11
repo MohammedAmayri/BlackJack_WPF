@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using WpfApp2.View.ViewModels;
 using GameCardLib.ViewModels;
 using System.Media;
+using BalckJack_Wpf.View;
 
 namespace WpfApp2
 {
@@ -33,15 +34,16 @@ namespace WpfApp2
             soundPlayer.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\Sounds\\BackGroundMusic.wav"; //Change
             soundPlayer.PlayLooping();
         }
-        private void GameOver()
+        private void GameOver(string str)
         {
-            GameOverScreen gameOverScreen = new GameOverScreen();
-            gameOverScreen.Show();
-            // To close all the other windows
-            foreach (Window item in Application.Current.Windows)
-            {
-                if (item.DataContext == this) item.Close();
-            }
+            MessageBox.Show(str);
+            //GameOverScreen gameOverScreen = new GameOverScreen();
+            //gameOverScreen.Show();
+            //// To close all the other windows
+            //foreach (Window item in Application.Current.Windows)
+            //{
+            //    if (item.DataContext == this) item.Close();
+            //}
         }
         private void BetButton_Click(object sender, RoutedEventArgs e)
         {
@@ -84,6 +86,17 @@ namespace WpfApp2
         {
             Button ActionButton = sender as Button;
             _gameViewModel.ActionButtonCommand(ActionButton.Name,GameOver,() => MessageBox.Show("The cards are now reshuffled"));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            _gameViewModel.RetrieveData(ourDataGridScreen);
+        }
+
+        private void ourDataGridScreen(List<string> playerList)
+        {
+            DataGridScreen dataGridScreen = new DataGridScreen(playerList,_gameViewModel);
+            dataGridScreen.Show();
         }
     }
       
