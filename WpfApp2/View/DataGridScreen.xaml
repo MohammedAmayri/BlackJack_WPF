@@ -5,10 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BalckJack_Wpf.View"
         mc:Ignorable="d"
-        Title="DataGridScreen" Height="450" Width="800">
+        Title="DataGridScreen" Height="469" Width="662">
     <Grid>
-        <ListBox Name="MyListBox" HorizontalAlignment="Left" Height="398" Margin="10,10,0,0" VerticalAlignment="Top" Width="648" ItemsSource="{Binding}"/>
-        <Button Name="DeleteBtn" Content="Delete" HorizontalAlignment="Left" Height="60" Margin="680,38,0,0" VerticalAlignment="Top" Width="103" Click="DeleteBtn_Click"/>
-        <Button Content="Update" HorizontalAlignment="Left" Height="66" Margin="680,171,0,0" VerticalAlignment="Top" Width="103"/>
+        <ListBox Name="MyListBox" HorizontalAlignment="Left" Height="381" Margin="46,10,0,0" VerticalAlignment="Top" Width="558" ItemsSource="{Binding}"/>
+        <Button Name="DeleteBtn" Content="Delete" HorizontalAlignment="Left" Height="47" Margin="284,396,0,0" VerticalAlignment="Top" Width="72" Click="DeleteBtn_Click"/>
     </Grid>
 </Window>

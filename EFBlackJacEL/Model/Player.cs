@@ -27,9 +27,8 @@ namespace GameCardLib.Model
 
         #region properties
         [Key]
-        public int PlayerId { 
-            get =>  _playerID ; 
-            set { _playerID = random.Next(1, 10000); } 
+        public int PlayerId {
+            get; set;
         }
         [Required]
         public string Name
@@ -86,11 +85,9 @@ namespace GameCardLib.Model
             }
         }
 
-        public PlayingHabit PlayerPlayingHabbits
+        public virtual PlayingHabit PlayerPlayingHabbits
         {
-            set { playingHabbits = value; }
-
-            get { return playingHabbits; }
+            set; get;
         }
 
         

@@ -459,7 +459,7 @@ namespace GameCardLib.ViewModels
             }
             else
             {
-                _messages = "Something went wrong! You should never see this message";
+                _messages = "Something went wrong! You should have never seen this message";
                 OnPropertyChanged(nameof(Messages));
             }
 
@@ -487,6 +487,8 @@ namespace GameCardLib.ViewModels
                     {
                         SaveToDB();
                         gameOverDelegate("BYE BYE");
+                        _gameBoard.currentGameState = GameBoard.GameState.GameOver;
+                        IsVisible = _gameBoard.Visible();
                     }
                     else
                     {
@@ -526,7 +528,7 @@ namespace GameCardLib.ViewModels
         {
             List<string> PlayerListForGrid = new List<string>();
             
-            PlayerListForGrid.Add("Player ID" + "\t" +"Player Name" + "\t" +"Number of days since last game" + "\t");
+            PlayerListForGrid.Add("Player ID" + "\t" +"Player Name" + "\t" +"Number of days since last game" + "\t"+ "Amount of money Won/lost" + "\t");
             //To retrive the data from the DB using the DBContext
             using GameDbContext _dbContext = new GameDbContext();
             var players = (from player in _dbContext.Players
@@ -539,7 +541,7 @@ namespace GameCardLib.ViewModels
 
             foreach (var player in players)
             {
-                PlayerListForGrid.Add(player.id + "\t" + player.Name + "\t" + player.playingHabit.NoGameDays + "\t");
+                PlayerListForGrid.Add(player.id + "\t" + player.Name + "\t" + player.playingHabit.NoGameDays + "\t" + player.playingHabit.MoneySpent + "\t");
                 playerIds.Add(Convert.ToInt32(player.id));
             }
             _dbContext.SaveChanges();
@@ -550,28 +552,20 @@ namespace GameCardLib.ViewModels
         public void deleteData(int playerIdIndex)
         {
             int idToSearchFor = playerIds[playerIdIndex];
-            using (GameDbContext _dbContext = new GameDbContext())
-            {
-                var playerToRemove = _dbContext.Players.FirstOrDefault(x => x.PlayerId == idToSearchFor); //returns a single item.
-                
-                if (playerToRemove != null)
+            using GameDbContext _dbContext = new GameDbContext();
+            var players = (from player in _dbContext.Players
+                           where player.PlayerId==idToSearchFor
+                           select player).ToList();
+
+            foreach (var player in players)
+            {   
                 {
-                    //try
-                    //{
-                        _dbContext.Players.Attach(playerToRemove);
-                        _dbContext.Players.RemoveRange(playerToRemove);
-                        _dbContext.SaveChanges();
-                    //}
-                  
-                    //    catch (DbUpdateConcurrencyException ex)
-                    //{
-                    //    ex.Entries.Single().Reload();
-                    //    _dbContext.SaveChanges();
-                    //}
-                
-                }
+                    _dbContext.Remove(player); }
             }
+            _dbContext.SaveChanges();
+
         }
+
 
         #endregion
         #region Screens

@@ -4,14 +4,16 @@ using EFBlackJacDAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EFBlackJacDAL.Migrations
 {
     [DbContext(typeof(GameDbContext))]
-    partial class GameDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211211205414_toFixTheDamage")]
+    partial class toFixTheDamage
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,7 +36,7 @@ namespace EFBlackJacDAL.Migrations
 
                     b.HasKey("HabitId");
 
-                    b.ToTable("playingHabits");
+                    b.ToTable("PlayingHabit");
                 });
 
             modelBuilder.Entity("GameCardLib.Model.Dealer", b =>

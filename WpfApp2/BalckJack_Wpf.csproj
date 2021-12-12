@@ -99,10 +99,14 @@
     <None Remove="Images\UserInterface\HitHover2.png" />
     <None Remove="Images\UserInterface\NextRoundButton.png" />
     <None Remove="Images\UserInterface\NextRoundButtonHover.png" />
+    <None Remove="Images\UserInterface\Reshuffle.png" />
+    <None Remove="Images\UserInterface\ReshuffleHover.png" />
     <None Remove="Images\UserInterface\Stand.png" />
     <None Remove="Images\UserInterface\StandDisabled.png" />
     <None Remove="Images\UserInterface\StandHover.png" />
     <None Remove="Images\UserInterface\StandHover2.png" />
+    <None Remove="Images\UserInterface\stats.png" />
+    <None Remove="Images\UserInterface\StatsHover.png" />
     <None Remove="Sounds\BackGroundMusic.wav" />
   </ItemGroup>
 
@@ -377,6 +381,12 @@
     <Content Include="Images\UserInterface\NextRoundButtonHover.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\UserInterface\Reshuffle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserInterface\ReshuffleHover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\UserInterface\Stand.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -387,6 +397,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\UserInterface\StandHover2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserInterface\stats.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\UserInterface\StatsHover.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Sounds\BackGroundMusic.wav">

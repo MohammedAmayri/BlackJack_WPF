@@ -4,14 +4,16 @@ using EFBlackJacDAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EFBlackJacDAL.Migrations
 {
     [DbContext(typeof(GameDbContext))]
-    partial class GameDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211212150750_initial")]
+    partial class initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -105,7 +107,8 @@ namespace EFBlackJacDAL.Migrations
                 {
                     b.HasOne("EFBlackJacEL.Model.PlayingHabit", "PlayerPlayingHabbits")
                         .WithMany()
-                        .HasForeignKey("PlayerPlayingHabbitsHabitId");
+                        .HasForeignKey("PlayerPlayingHabbitsHabitId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("PlayerPlayingHabbits");
                 });

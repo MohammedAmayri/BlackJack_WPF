@@ -37,6 +37,7 @@ namespace BalckJack_Wpf.View
         {
             //MessageBox.Show(MyListBox.SelectedItem.ToString());
             _gameViewModel.deleteData(MyListBox.SelectedIndex - 1);
+            
         }
     }
 }

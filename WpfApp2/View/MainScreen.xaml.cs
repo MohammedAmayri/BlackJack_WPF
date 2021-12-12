@@ -36,14 +36,14 @@ namespace WpfApp2
         }
         private void GameOver(string str)
         {
-            MessageBox.Show(str);
-            //GameOverScreen gameOverScreen = new GameOverScreen();
-            //gameOverScreen.Show();
-            //// To close all the other windows
-            //foreach (Window item in Application.Current.Windows)
-            //{
-            //    if (item.DataContext == this) item.Close();
-            //}
+            //MessageBox.Show(str);
+            GameOverScreen gameOverScreen = new GameOverScreen();
+            gameOverScreen.Show();
+             //To close all the other windows
+            foreach (Window item in Application.Current.Windows)
+            {
+               if (item.DataContext == this) item.Close();
+            }
         }
         private void BetButton_Click(object sender, RoutedEventArgs e)
         {
@@ -88,7 +88,7 @@ namespace WpfApp2
             _gameViewModel.ActionButtonCommand(ActionButton.Name,GameOver,() => MessageBox.Show("The cards are now reshuffled"));
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Stats_Click(object sender, RoutedEventArgs e)
         {
             _gameViewModel.RetrieveData(ourDataGridScreen);
         }

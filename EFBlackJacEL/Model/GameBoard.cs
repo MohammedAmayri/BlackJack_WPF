@@ -24,7 +24,8 @@ namespace GameCardLib.Model
             PlayerWon,
             DealerWon,
             RoundOver,
-            NewRound
+            NewRound,
+            GameOver
         };
         #endregion
 
@@ -106,7 +107,7 @@ namespace GameCardLib.Model
 
         public bool Visible()
         {
-            if (currentGameState == GameState.RoundOver || currentGameState == GameState.PlayerBlackJack || currentGameState == GameState.PlayerBust)
+            if (currentGameState == GameState.RoundOver || currentGameState == GameState.PlayerBlackJack || currentGameState == GameState.PlayerBust || currentGameState == GameState.PlayerBlackJack)
             {
                 return true;
             }

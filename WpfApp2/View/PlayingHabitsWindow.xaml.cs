@@ -44,7 +44,7 @@ namespace BalckJack_Wpf.View
 
         private void StartGame_Btn(object sender, RoutedEventArgs e)
         {   
-            GameViewModel gameViewModel = new GameViewModel(playerName, numberOfDaysSinceLastGame, cashEarnedOrSpent);
+            GameViewModel gameViewModel = new GameViewModel(playerName, numberOfDaysSinceLastGame, Convert.ToInt32(UserCash.Text)*wonLastGame);
             MainScreen mainScreen = new MainScreen(gameViewModel);
             mainScreen.DataContext = gameViewModel;
             mainScreen.Show();
