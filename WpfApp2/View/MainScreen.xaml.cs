@@ -30,13 +30,12 @@ namespace WpfApp2
             InitializeComponent();
             _gameViewModel = gameViewModel;
             //Player for the sound effects
-            SoundPlayer soundPlayer = new SoundPlayer();
-            soundPlayer.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\Sounds\\BackGroundMusic.wav"; //Change
-            soundPlayer.PlayLooping();
+            //SoundPlayer soundPlayer = new SoundPlayer();
+            //soundPlayer.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\Sounds\\BackGroundMusic.wav"; //Change
+            //soundPlayer.PlayLooping();
         }
-        private void GameOver(string str)
+        private void GameOver()
         {
-            //MessageBox.Show(str);
             GameOverScreen gameOverScreen = new GameOverScreen();
             gameOverScreen.Show();
              //To close all the other windows

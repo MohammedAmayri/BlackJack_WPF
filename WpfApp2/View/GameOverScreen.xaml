@@ -9,7 +9,7 @@
         ResizeMode="NoResize">
     
     <Grid>
-        <Image Source="C:\Users\Lenovo\source\repos\WpfApp2\WpfApp2\Images\GameOverScreen\GameOverBackground.png" Stretch="Fill" />
+        <Image Source="..\Images\GameOverScreen\GameOverBackground.png" Stretch="Fill" />
     </Grid>
 </Window>
 

@@ -16,7 +16,7 @@ namespace GameCardLib.ViewModels
     {
         #region Delegates
         public delegate void OurDelegate();
-        public delegate void OurDelegate2(string str);
+        public delegate void OurDelegate2();
         public delegate void OurDelegateForDataGrid(List<string> players);
         #endregion
         #region fields
@@ -486,7 +486,7 @@ namespace GameCardLib.ViewModels
                     if (_player.BankRoll == 0)
                     {
                         SaveToDB();
-                        gameOverDelegate("BYE BYE");
+                        gameOverDelegate();
                         _gameBoard.currentGameState = GameBoard.GameState.GameOver;
                         IsVisible = _gameBoard.Visible();
                     }
@@ -527,8 +527,8 @@ namespace GameCardLib.ViewModels
          public void RetrieveData(OurDelegateForDataGrid dataGridDelegate)
         {
             List<string> PlayerListForGrid = new List<string>();
-            
-            PlayerListForGrid.Add("Player ID" + "\t" +"Player Name" + "\t" +"Number of days since last game" + "\t"+ "Amount of money Won/lost" + "\t");
+            string str = string.Format("{0,-15} {1,-15} {2,-15} {3,-15}\n", "Player ID", "Player Name", "Number of days since last game", "Amount of money Won/lost");
+            PlayerListForGrid.Add(str);
             //To retrive the data from the DB using the DBContext
             using GameDbContext _dbContext = new GameDbContext();
             var players = (from player in _dbContext.Players
@@ -541,7 +541,8 @@ namespace GameCardLib.ViewModels
 
             foreach (var player in players)
             {
-                PlayerListForGrid.Add(player.id + "\t" + player.Name + "\t" + player.playingHabit.NoGameDays + "\t" + player.playingHabit.MoneySpent + "\t");
+                str = string.Format("{0,-15} {1,-15} {2,-15} {3,-15}\n", player.id, player.Name, player.playingHabit.NoGameDays, player.playingHabit.MoneySpent);
+                PlayerListForGrid.Add(str);
                 playerIds.Add(Convert.ToInt32(player.id));
             }
             _dbContext.SaveChanges();
@@ -558,9 +559,8 @@ namespace GameCardLib.ViewModels
                            select player).ToList();
 
             foreach (var player in players)
-            {   
-                {
-                    _dbContext.Remove(player); }
+            {
+                {  _dbContext.Remove(player); }
             }
             _dbContext.SaveChanges();
 
